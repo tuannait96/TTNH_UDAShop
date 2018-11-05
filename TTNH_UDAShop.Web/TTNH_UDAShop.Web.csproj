@@ -4375,6 +4375,8 @@
     <Content Include="Views\Shared\Layouts.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
+    <Content Include="Views\Shared\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TTNH_UDAShop.Common\TTNH_UDAShop.Common.csproj">
