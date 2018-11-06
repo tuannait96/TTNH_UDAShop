@@ -8,6 +8,10 @@
             CreatedDate: new Date(),
             Status: true
         }
+        $scope.ckeditorOptions = {
+            languague: 'vi',
+            height: '200px'
+        }
         // sự kiện khi bấm nút submit
         $scope.AddProductCategory = AddProductCategory;
         // lấy danh mục seo
@@ -36,6 +40,17 @@
             }, function () {
                 console.log('Cannot get list parent');
             });
+        }
+
+        $scope.ChooseImage = function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                $scope.$apply(function () {
+                    $scope.productCategory.Image = fileUrl;
+                })
+
+            }
+            finder.popup();
         }
 
         loadParentCategory();
