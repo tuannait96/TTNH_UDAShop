@@ -19,7 +19,7 @@ namespace TTNH_UDAShop.Web.Infrastructure.Core
 
         public int TotalPages { set; get; }
         public int TotalCount { set; get; }
-        //public int MaxPage { set; get; }
+        public int MaxPage { set; get; }
         public IEnumerable<T> Items { set; get; }
     }
 }

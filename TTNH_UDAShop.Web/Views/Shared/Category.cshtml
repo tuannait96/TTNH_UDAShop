@@ -8,7 +8,7 @@
                 var url = "/" + category.Alias + ".pc-" + category.ID + ".html";
                 var childCategories = Model.Where(x => x.ParentID == category.ID);
                 <li>
-                    <a href="@url">@category.Name @(childCategories.Count() > 0 ? "<img class=\"arrow-img\" src=\"/~Assets/client/images/arrow1.png\" alt=\"\" >" : "") </a>
+                    <a href="@url">@category.Name @(childCategories.Count() > 0 ? "<img class=\"arrow-img\" src=\"/Assets/client/images/arrow1.png\" alt=\"\" />" : "") </a>
                     @if (childCategories.Count() > 0)
                     {
                         <ul class="cute">
@@ -20,7 +20,7 @@
 
                         </ul>
                     }
-                        
+
                 </li>
 
 
