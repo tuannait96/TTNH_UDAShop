@@ -26,6 +26,8 @@ namespace TTNH_UDAShop.Service
 
         IEnumerable<Product> GetListProductByCategoryIdPaging(int categoryId, int page, int pageSize, string sort, out int totalRow);
 
+        IEnumerable<string> GetListProductByName(string name);
+
         Product GetById(int id);
 
         void Save();
@@ -164,6 +166,10 @@ namespace TTNH_UDAShop.Service
                 }
 
             }
+        }
+        public IEnumerable<string> GetListProductByName(string name)
+        {
+            return _productRepository.GetMulti(x => x.Status && x.Name.Contains(name)).Select(y => y.Name);
         }
     }
 }

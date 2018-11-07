@@ -48,5 +48,13 @@ namespace TTNH_UDAShop.Web.Controllers
 
             return View(paginationSet);
         }
+        public JsonResult GetListProductByName(string keyword)
+        {
+            var model = _productService.GetListProductByName(keyword);
+            return Json(new
+            {
+                data = model
+            }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
